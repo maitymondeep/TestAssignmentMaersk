@@ -1,0 +1,17 @@
+{
+  "$schema":  "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion":  "1.0.0.0",
+  "parameters":  {
+    "adminUsername":  {
+        "value":  "administrator"
+    },
+    "adminPassword":  {
+      "reference":  {
+        "keyVault":  {
+           "id": "/subscriptions/9a3XXX-XXXX-XXXX-XXXX-XXXbb7/resourceGroups/WorkAssignment-RG/providers/Microsoft.KeyVault/vaults/WorkAssignment-KV"
+        },
+          "secretName":  "vmadminpassword" 
+      }
+    }
+  }
+}
